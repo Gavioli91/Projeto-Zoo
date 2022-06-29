@@ -3,7 +3,7 @@ const data = require('../data/zoo_data');
 const { species } = data;
 
 function getSpeciesByIds(...ids) {
-if (!ids.length) return [];
+  if (!ids.length) return [];
   return species.filter(({ id }) => ids.includes(id));
 }
 
