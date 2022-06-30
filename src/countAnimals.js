@@ -14,3 +14,4 @@ const countAnimals = (animal) => {
     .residents.filter((animais) => animais.sex === animal.sex).length;
 };
 module.exports = countAnimals;
+
