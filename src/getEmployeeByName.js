@@ -4,8 +4,7 @@ function getEmployeeByName(employeeName) {
   if (employeeName === undefined) {
     return {};
   }
-  return data.employees.find(({ firstName, lastName }) => firstName === employeeName
-   || lastName === employeeName);
+  return data.employees.find(({ firstName, lastName }) => firstName === employeeName || lastName === employeeName);
 }
 
 module.exports = getEmployeeByName;
