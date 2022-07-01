@@ -9,8 +9,7 @@ const countAnimals = (animal) => {
     return vazio;
   }
   if (!animal.sex) {
-    return data.species.find((animais) =>
-    animais.name === animal.specie).residents.length;
+    return data.species.find((animais) => animais.name === animal.specie).residents.length;
   }
   return data.species.find((animais) => animais.name === animal.specie)
     .residents.filter((animais) => animais.sex === animal.sex).length;
