@@ -1,9 +1,5 @@
 const data = require('../data/zoo_data');
 
-const priceChildren = data.prices.child;
-const priceAdult = data.prices.adult;
-const priceSenior = data.prices.senior;
-const entrantsToday = [];
 function countEntrants(entrants) {
   const children = entrants.filter((child) => child.age < 18).length;
   const adults = entrants.filter((adult) => adult.age >= 18 && adult.age < 50).length;
