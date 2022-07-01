@@ -33,14 +33,14 @@ describe('Testes da função getOpeningHours', () => {
   it('', () => {
     expect(() => getOpeningHours('Monday', '17:00-AM')).toThrow('The hour must be between 0 and 12');
   });
-  // Para o argumento vazio deve retornar 'null';
-  it('Para o argumento vazio deve retornar null', () => {
-    expect(() =>handlerElephants('wrongParameter')).toBe('Null');
+  
+  it('Para os argumentos Wednesday e 09:60-AM deve lançar uma exceção com a mensagem: The minutes must be between 0 and 59', () => {
+    expect(() => getOpeningHours('Wednesday', '09:60-AM')).toThrow('The minutes must be between 0 and 59');
   });
-  // Para o argumento de uma String contida dentro do objeto elefantes deve retornar a respectiva chave
-  it('Para o argumento de uma String contida dentro do objeto elefantes deve retornar a respectiva chave', () => {
-    expect(() =>handlerElephants('popularity')).toEqual(5);
-  });
+  
+  it('O argumento deve retornar o objeto', () => {
+    expect(getOpeningHours()).toBe(hours);
+  })
 });
 
 describe('Testes da função getOpeningHours', () => { });
