@@ -33,14 +33,12 @@ describe('Testes da função getOpeningHours', () => {
   it('', () => {
     expect(() => getOpeningHours('Monday', '17:00-AM')).toThrow('The hour must be between 0 and 12');
   });
-  
   it('Para os argumentos Wednesday e 09:60-AM deve lançar uma exceção com a mensagem: The minutes must be between 0 and 59', () => {
     expect(() => getOpeningHours('Wednesday', '09:60-AM')).toThrow('The minutes must be between 0 and 59');
   });
-  
   it('O argumento deve retornar o objeto', () => {
     expect(getOpeningHours()).toBe(hours);
-  })
+  });
 });
 
 describe('Testes da função getOpeningHours', () => { });
