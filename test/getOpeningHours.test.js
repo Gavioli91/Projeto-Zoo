@@ -1,4 +1,5 @@
 const getOpeningHours = require('../src/getOpeningHours');
+const { hours } = require ('../data/zoo_data');
 
 describe('Testes da função getOpeningHours', () => {
   // Para os argumentos Monday e 09:00-AM deve retornar a string 'The zoo is closed' (Já que o Zoo está sempre fechado na segunda);
