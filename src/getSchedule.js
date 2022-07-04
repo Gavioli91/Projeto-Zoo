@@ -4,12 +4,13 @@ const { species, hours } = data;
 
 function availabilityAnimals(animal) {
   return species.find((callback) => callback.name === animal).availability;
-}function zooAnimal(day) {
+}
+function zooAnimal(day) {
   const seeAnimals = [];
   species.forEach((animal) => {
     if (animal.availability.includes(day)) {
       seeAnimals.push(animal.name);
-}
+    }
   });
   return seeAnimals;
 }
@@ -25,11 +26,11 @@ function agend(day) {
     const animalAgenda = zooAnimal(day);
     return {
       [day]: {
-officeHour: `Open from ${time.open}am until ${time.close}pm`,
+        officeHour: `Open from ${time.open}am until ${time.close}pm`,
         exhibition: animalAgenda,
       },
     };
-}
+  }
 }
 
 function diaDaSemana() {
