@@ -5,6 +5,7 @@ const { species, hours } = data;
 function availabilityAnimals(animal) {
   return species.find((callback) => callback.name === animal).availability;
 }
+
 function zooAnimal(day) {
   const seeAnimals = [];
   species.forEach((animal) => {
@@ -14,6 +15,7 @@ function zooAnimal(day) {
   });
   return seeAnimals;
 }
+
 function agend(day) {
   if (typeof day === 'string') {
     if (day === 'Monday') {
@@ -31,6 +33,7 @@ function agend(day) {
     };
   }
 }
+
 function diaDaSemana() {
   let semana = {};
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -41,6 +44,7 @@ function diaDaSemana() {
   });
   return semana;
 }
+
 function getSchedule(scheduleTarget) {
   switch (true) {
   case species.some((animal) => animal.name === scheduleTarget):
@@ -51,4 +55,5 @@ function getSchedule(scheduleTarget) {
     return diaDaSemana();
   }
 }
+
 module.exports = getSchedule;
